@@ -73,7 +73,7 @@
 
 	class JS_JC_FA18F: Plane_Base_F {
 		class Components: Components {
-			// #include "JSJC_FA18_Sensors.hpp"
+			#include "JSJC_FA18_Sensors.hpp"
 
 			class TransportPylonsComponent {
 				class Pylons {
