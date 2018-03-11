@@ -1,0 +1,6 @@
+#include "CfgEventHandlers.hpp"
+#include "CfgPatches.hpp"
+#include "CfgAmmo.hpp"
+#include "CfgMagazines.hpp"
+#include "CfgWeapons.hpp"
+#include "CfgVehicles.hpp"

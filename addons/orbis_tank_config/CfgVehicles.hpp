@@ -77,7 +77,7 @@ class CfgVehicles {
 		};
 		class EventHandlers: EventHandlers {
 			class RHSUSF_EventHandlers {
-				init = "_this spawn orbis_tank_fnc_vehicleInit;";
+				init = "[_this select 0, 'rhsusf_mag_L8A3_8'] spawn orbis_tank_fnc_vehicleInit;";
 			};
 		};
 		class Exhausts {
@@ -135,7 +135,7 @@ class CfgVehicles {
 		};
 		class EventHandlers: EventHandlers {
 			class RHSUSF_EventHandlers {
-				init = "_this spawn orbis_tank_fnc_vehicleInit;";
+				init = "[_this select 0, 'rhsusf_mag_L8A3_8'] spawn orbis_tank_fnc_vehicleInit;";
 			};
 		};
 		class Exhausts {
@@ -203,7 +203,7 @@ class CfgVehicles {
 		};
 		class EventHandlers: EventHandlers {
 			class RHSUSF_EventHandlers {
-				init = "_this spawn orbis_tank_fnc_vehicleInit; _this call RHS_fnc_M1_init";
+				init = "[_this select 0, 'rhsusf_mag_L8A3_12'] spawn orbis_tank_fnc_vehicleInit; _this call RHS_fnc_M1_init";
 			};
 		};
 		class Exhausts {

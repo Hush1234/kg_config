@@ -1,4 +1,8 @@
 	class JS_JC_SU35: Plane_Base_F {
+		receiveRemoteTargets = true;
+		reportRemoteTargets = true;
+		reportOwnPosition = true;
+
 		class Components: Components {
 			#include "JSJC_FA18_Sensors.hpp"
 
@@ -17,39 +21,51 @@
 							"FIR_OPFOR_Combined_HP", */ // AA & AG
 							"FIR_OPFOR_AA_HP" // AA Only
 						};
+						attachment = "FIR_R73_P_1rnd_M";
 					};
 					class pylon2: pylon1 {
 						hardpoints[] = {"FIR_OPFOR_AA_HP"};
+						attachment = "FIR_R73_P_1rnd_M";
 					};
 					class pylon3: pylon1 {
 						hardpoints[] = {"FIR_OPFOR_AA_HP"};
+						attachment = "FIR_R73_P_1rnd_M";
 					};
 					class pylon4: pylon1 {
 						hardpoints[] = {"FIR_OPFOR_AA_HP"};
+						attachment = "FIR_R73_P_1rnd_M";
 					};
 					class pylon5: pylon1 {
 						hardpoints[] = {"FIR_OPFOR_Combined_HP"};
+						attachment = "FIR_R77_P_1rnd_M";
 					};
 					class pylon6: pylon1 {
 						hardpoints[] = {"FIR_OPFOR_Combined_HP"};
+						attachment = "FIR_R77_P_1rnd_M";
 					};
 					class pylon7: pylon1 {
 						hardpoints[] = {"FIR_OPFOR_Combined_HP"};
+						attachment = "FIR_R77_P_1rnd_M";
 					};
 					class pylon8: pylon1 {
 						hardpoints[] = {"FIR_OPFOR_Combined_HP"};
+						attachment = "FIR_R77_P_1rnd_M";
 					};
 					class pylon9: pylon1 {
 						hardpoints[] = {"FIR_OPFOR_Combined_HP"};
+						attachment = "FIR_R77_P_1rnd_M";
 					};
 					class pylon10: pylon1 {
 						hardpoints[] = {"FIR_OPFOR_Combined_HP"};
+						attachment = "FIR_R77_P_1rnd_M";
 					};
 					class pylon11: pylon1 {
 						hardpoints[] = {"FIR_OPFOR_Combined_HP"};
+						attachment = "FIR_R77_P_1rnd_M";
 					};
 					class pylon12: pylon1 {
 						hardpoints[] = {"FIR_OPFOR_Combined_HP"};
+						attachment = "FIR_R77_P_1rnd_M";
 					};
 				};
 			};

@@ -1,9 +1,13 @@
-params ["_vehicle"];
+private _vehicle = _this select 0;
+private _magazine = param [1, "SmokeLauncherMag"];
 
 // init smoke reload
-private _maxSmokeMags = {_x isEqualTo "SmokeLauncherMag"} count getArray (configFile >> "CfgVehicles" >> typeOf _vehicle >> "Turrets" >> "MainTurret" >> "Turrets" >> "CommanderOptics" >> "magazines");
+private _maxSmokeMags = {_x select 0 isEqualTo _magazine} count magazinesAllTurrets _vehicle;
+private _magzineAmmoCount = getNumber (configFile >> "CfgMagazines" >> _magazine >> "count");
 _vehicle setVariable ["maxSmokeMags", _maxSmokeMags];
-_vehicle setVariable ["smokeReserve", _maxSmokeMags * 6 * 2];
+_vehicle setVariable ["smokeReserve", _maxSmokeMags * _magzineAmmoCount * 6];
+_vehicle setVariable ["smokeMagazine", _magazine];
+_vehicle setVariable ["smokeRounds", _magzineAmmoCount];
 
 // add smoke reload action
 private _action = [

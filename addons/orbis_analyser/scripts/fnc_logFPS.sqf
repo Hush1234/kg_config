@@ -1,5 +1,6 @@
-// diag_fps diag_fpsMin
-while {true} do {
+#include "script_settings.hpp"
+
+while {DEBUG_MODE > 0} do {
 	private _players = {alive _x} count (allPlayers - entities "HeadlessClient_F");
 	private _HC = count (entities "HeadlessClient_F");
 	private _ai = {(!isPlayer _x) && (alive _x)} count entities "CAManBase";

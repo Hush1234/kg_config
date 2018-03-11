@@ -1,0 +1,2 @@
+deadly_concertina_wire_fnc_pickup = compile preprocessFileLineNumbers "deadly_concertina_wire\functions\fnc_pickup.sqf";
+deadly_concertina_wire_fnc_place = compile preprocessFileLineNumbers "deadly_concertina_wire\functions\fnc_place.sqf";

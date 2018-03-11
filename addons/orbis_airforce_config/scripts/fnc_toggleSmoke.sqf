@@ -5,6 +5,9 @@ private _particleColorOld = _vehicle getVariable ["particleColor", [0, 0, 0, 0]]
 private _objectFollowOld = _vehicle getVariable ["objectFollow", objNull];
 private _particleSourceOld = _vehicle getVariable ["smokeSource", objNull];
 
+deleteVehicle _objectFollowOld;
+deleteVehicle _particleSourceOld;
+
 if (_smokeMod isEqualTo _smokeModOld) exitWith {};
 if (_smokeMod isEqualTo "off") exitWith {
 	_vehicle setVariable ["smokeMod", "off"];
@@ -12,9 +15,6 @@ if (_smokeMod isEqualTo "off") exitWith {
 	_vehicle setVariable ["objectFollow", objNull];
 	_vehicle setVariable ["smokeSource", objNull];
 };
-
-deleteVehicle _objectFollowOld;
-deleteVehicle _particleSourceOld;
 
 sleep 0.3;
 
@@ -24,7 +24,7 @@ hideObject _objectFollow;
 private _particleSource = "#particlesource" createVehicleLocal (getPos _vehicle);
 _particleSource attachTo [_objectFollow, [0, 0, 0]];
 _particleSource setParticleCircle [0, [0, 0, 0]];
-_particleSource setParticleRandom [15, [0.1, 0.1, 0.1], [12.0, 12.0, 12.0], 0.0, 0.0, [0, 0, 0, 0.05], 0, 0];
+_particleSource setParticleRandom [15, [0.15, 0.15, 0.15], [12.0, 12.0, 12.0], 0.0, 0.0, [0, 0, 0, 0.05], 0, 0];
 _particleSource setParticleParams [["\A3\data_f\ParticleEffects\Universal\Universal", 16, 12, 8, 0], "",
 /*Type*/ "Billboard",
 /*TimmerPer*/ 1,
@@ -41,7 +41,7 @@ _particleSource setParticleParams [["\A3\data_f\ParticleEffects\Universal\Univer
 /*DestroyScript*/ "",
 /*Follow*/ _objectFollow
 ];
-_particleSource setDropInterval 0.004;
+_particleSource setDropInterval 0.002;
 
 _vehicle setVariable ["smokeMod", _smokeMod];
 _vehicle setVariable ["particleColor", _particleColor];
