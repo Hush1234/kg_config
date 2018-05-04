@@ -22,33 +22,33 @@ class CfgVehicles {
 	// class Land_Barn_W_01;
 
 	/* class Arma3Taviana_Land_Mil_Guardhouse: Land_Mil_Guardhouse {
-		#include "eventRmoveSelf.hpp"
+		#include "eventRemoveSelf.hpp"
 	};
 	class Arma3Taviana_Land_HouseV_1L2: Land_HouseV_1L2 {
-		#include "eventRmoveSelf.hpp"
+		#include "eventRemoveSelf.hpp"
 	}; */
 	class Arma3Taviana_Land_HouseV_3I3: Land_HouseV_3I3 {
-		#include "eventRmoveSelf.hpp"
+		#include "eventRemoveSelf.hpp"
 	};
 	/* class Arma3Taviana_Land_repair_center: Land_repair_center {
-		#include "eventRmoveSelf.hpp"
+		#include "eventRemoveSelf.hpp"
 	}; */
 	class Arma3Taviana_Land_A_Hospital: Land_A_Hospital {
-		#include "eventRmoveSelf.hpp"
+		#include "eventRemoveSelf.hpp"
 	};
 	class Arma3Taviana_Land_Mil_House: Land_Mil_House {
-		#include "eventRmoveSelf.hpp"
+		#include "eventRemoveSelf.hpp"
 	};
 	class Arma3Taviana_Land_Mil_Barracks: Land_Mil_Barracks {
-		#include "eventRmoveSelf.hpp"
+		#include "eventRemoveSelf.hpp"
 	};
 	class Arma3Taviana_Land_a_stationhouse: Land_a_stationhouse {
-		#include "eventRmoveSelf.hpp"
+		#include "eventRemoveSelf.hpp"
 	};
 	class Arma3Taviana_Land_A_Office01: Land_A_Office01 {
-		#include "eventRmoveSelf.hpp"
+		#include "eventRemoveSelf.hpp"
 	};
 	/* class Arma3Taviana_Land_Barn_W_01: Land_Barn_W_01 {
-		#include "eventRmoveSelf.hpp"
+		#include "eventRemoveSelf.hpp"
 	}; */
 };
