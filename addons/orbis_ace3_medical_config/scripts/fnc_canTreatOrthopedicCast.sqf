@@ -17,6 +17,6 @@ private _hasSAM = ((_sam select _part) select 0) > 0;
 
 private _openWounds = _target getVariable [QGVAR(openWounds), []];
 private _bandagedWounds = _target getVariable [QGVAR(bandagedWounds), []];
-private _bleedingWound = {((_x select 2) isEqualTo _part) && ((_x select 4) * (_x select 3) > 0)} count ([_openWounds, _bandagedWounds] select _bandagedAlso) > 0;
+private _bleedingWound = {((_x select 2) isEqualTo _part) && ((_x select 4) * (_x select 3) > 0)} count ([_openWounds, _openWounds + _bandagedWounds] select _bandagedAlso) > 0;
 
 ((_hasDamage || _hasSAM) && !_bleedingWound)

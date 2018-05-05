@@ -3,7 +3,7 @@ class CfgVehicles {
 	class LandVehicle;
 	class StaticWeapon: LandVehicle {
 		class Turrets;
-		class MainTurret;	
+		class MainTurret;
 	};
 	class StaticCannon: StaticWeapon {};
 
@@ -70,9 +70,19 @@ class CfgVehicles {
 		class UserActions {
 			class fold {
 				condition = "false";
+				displayName = "Fold gun";
+				onlyForplayer = 0;
+				position = "aimpoint";
+				radius = 2.51;
+				statement = "[this,1] call rhs_fnc_d30_pack;";
 			};
 			class Unfold {
 				condition = "false";
+				displayName = "Unfold gun";
+				onlyForplayer = 0;
+				position = "aimpoint";
+				radius = 2.51;
+				statement = "[this,0] call rhs_fnc_d30_pack;";
 			};
 		};
 	};
