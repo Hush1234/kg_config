@@ -31,6 +31,10 @@ class CfgVehicles {
 	};
 
 	class rhs_D30_base: StaticCannon {
+		ace_cargo_size = 3;
+		ace_dragging_canDrag = 0;
+		ace_dragging_canCarry = 0;
+		
 		class Turrets: Turrets {
 			class MainTurret: MainTurret {
 				turretInfoType = "ACE_Mk6_RscWeaponRangeArtillery";
@@ -189,12 +193,12 @@ class CfgVehicles {
             class ACE_MainActions {
 				condition = "true";
 				displayName = "Interactions";
-				distance = 8;
+				distance = 6;
 				selection = "";
 				
 				class ACE_Unload {
 					displayName = "Assemble D-30";
-					distance = 8;
+					distance = 6;
 					condition = "true";
 					statement = "[_player,_target] spawn deadly_artilleryup_fnc_unload";
 					showDisabled = 0;
