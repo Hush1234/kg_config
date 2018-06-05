@@ -13,7 +13,7 @@ deleteVehicle _box;
 
 _pos = getPos _unit;
 _dir = (getDir _unit);
-_pos = (_pos vectorAdd [3 * sin _dir, 3 * cos _dir, 0]);
+//_pos = (_pos vectorAdd [3 * sin _dir, 3 * cos _dir, 0]);
 
 _arty = createVehicle ["rhs_D30_msv", [_pos select 0, _pos select 1, (_pos select 2) + 2], [], 0, "CAN_COLLIDE"];
 _unit disableCollisionWith _arty;

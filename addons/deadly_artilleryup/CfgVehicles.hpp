@@ -93,9 +93,10 @@ class CfgVehicles {
 				};
 				
 				class ACE_Load {
+					condition = "alive _target";
 					displayName = "Disassemble D-30";
 					distance = 5;
-					condition = "true";
+					exceptions[] = {"isNotInside"};
 					statement = "[_player,_target] spawn deadly_artilleryup_fnc_load";
 					showDisabled = 0;
 				};
@@ -168,7 +169,7 @@ class CfgVehicles {
 		displayname = "Disassembled D-30";
 		editorCategory = "EdCat_Supplies";
 		editorSubcategory = "EdSubcat_Storage";
-		armor = 500;
+		armor = 800;
 		faction = "BLU_F";
 		icon = "iconObject_1x3";
 		scope = 2;
@@ -191,15 +192,15 @@ class CfgVehicles {
 		
         class ACE_Actions {
             class ACE_MainActions {
-				condition = "true";
+				condition = "alive _target";
 				displayName = "Interactions";
 				distance = 6;
 				selection = "";
 				
 				class ACE_Unload {
+					condition = "true";
 					displayName = "Assemble D-30";
 					distance = 6;
-					condition = "true";
 					statement = "[_player,_target] spawn deadly_artilleryup_fnc_unload";
 					showDisabled = 0;
 				};

@@ -25,4 +25,3 @@ _box setDir (getDir _unit);
 sleep 2;
 
 _unit enableCollisionWith _box;
-	
