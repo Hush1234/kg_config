@@ -183,7 +183,7 @@ class CfgVehicles {
 		ace_cargo_size = -1;
 		ace_dragging_canDrag = 1;
 		ace_dragging_DragDirection = 90;
-		ace_dragging_DragPosition[] = {0,2.5,0};
+		ace_dragging_DragPosition[] = {0,2.4,0.1};
 		ace_dragging_canCarry = 0;
 		
 		class EventHandlers: EventHandlers {

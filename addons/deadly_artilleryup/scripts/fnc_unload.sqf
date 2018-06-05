@@ -13,17 +13,15 @@ deleteVehicle _box;
 
 _pos = getPos _unit;
 _dir = (getDir _unit);
-//_pos = (_pos vectorAdd [3 * sin _dir, 3 * cos _dir, 0]);
+_pos = (_pos vectorAdd [2 * sin _dir, 2 * cos _dir, 0]);
 
 _arty = createVehicle ["rhs_D30_msv", [_pos select 0, _pos select 1, (_pos select 2) + 2], [], 0, "CAN_COLLIDE"];
 _unit disableCollisionWith _arty;
-_arty enableSimulation false;
 _arty setDir (getDir _unit);
 
-_arty setVariable ["ace_dragging_dragPosition", [0,3.5,0.5]];
+_arty setVariable ["ace_dragging_dragPosition", [0,3.2,0.4]];
 [_unit, _arty] call ace_dragging_fnc_startDrag;
 
 sleep 2;
 
 _unit enableCollisionWith _arty;
-_arty enableSimulation true;
