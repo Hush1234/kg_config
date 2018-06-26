@@ -55,7 +55,38 @@ class CfgVehicles {
 				condition = "true";
 				displayName = "Interactions";
 				distance = 5;
-				selection = "";
+				selection = "gunnerview";
+				
+				class ace_interaction_flip {
+					condition = "call ace_interaction_fnc_canFlip";
+					displayName = "Flip";
+					statement = "[""ace_interaction_flip"",_target,_target] call CBA_fnc_targetEvent";
+				};
+				
+				class ACE_Passengers {
+					condition = "alive _target";
+					displayName = "Passengers";
+					exceptions[] = {"isNotSwimming"};
+					insertChildren = "_this call ace_interaction_fnc_addPassengersActions";
+					statement = "";
+				};
+				
+				class ace_rearm_Rearm {
+					condition = "_this call ace_rearm_fnc_canRearm";
+					displayName = "Rearm";
+					distance = 9;
+					exceptions[] = {"isNotInside"};
+					icon = "\z\ace\addons\rearm\ui\icon_rearm_interact.paa";
+					statement = "_this call ace_rearm_fnc_rearm";
+				};
+				
+				class ace_reload_CheckAmmo {
+					condition = "[_player,_target] call ace_reload_fnc_canCheckAmmo";
+					displayName = "Check Ammo";
+					distance = 2;
+					exceptions[] = {"isNotInside","isNotSwimming","isNotSitting"};
+					statement = "[_player,_target] call ace_reload_fnc_checkAmmo";
+				};
 				
 				class ACE_Load {
 					displayName = "Disassemble D-30";
@@ -133,9 +164,13 @@ class CfgVehicles {
 		displayname = "Disassembled D-30";
 		editorCategory = "EdCat_Supplies";
 		editorSubcategory = "EdSubcat_Storage";
+		armor = 500;
 		faction = "BLU_F";
 		icon = "iconObject_1x3";
 		scope = 2;
+		slingLoadCargoMemoryPoints[] = {"SlingLoadCargo1","SlingLoadCargo2","SlingLoadCargo3","SlingLoadCargo4"};
+		slingLoadCargoMemoryPointsDir[] = {};
+		
 		
 		editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\B_Slingload_01_Repair_F.jpg";
 		model = "\A3\Supplies_F_Heli\Slingload\Slingload_01_Repair_F.p3d";
@@ -145,6 +180,10 @@ class CfgVehicles {
 		ace_dragging_DragDirection = 90;
 		ace_dragging_DragPosition[] = {0,2.5,0};
 		ace_dragging_canCarry = 0;
+		
+		class EventHandlers: EventHandlers {
+			init = "(_this select 0) setMass 2000;";
+		};
 		
         class ACE_Actions {
             class ACE_MainActions {
