@@ -1,5 +1,7 @@
 private _object = _this select 0;
 
+if !(isServer) exitWith {};
+
 while {alive _object} do {
 	if (getPosATL _object select 2 < -1) then {
 		_object setVelocity [0, 0, 0];
