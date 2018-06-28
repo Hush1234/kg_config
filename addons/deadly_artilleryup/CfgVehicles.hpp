@@ -31,6 +31,10 @@ class CfgVehicles {
 	};
 
 	class rhs_D30_base: StaticCannon {
+		ace_cargo_size = 3;
+		ace_dragging_canDrag = 0;
+		ace_dragging_canCarry = 0;
+		
 		class Turrets: Turrets {
 			class MainTurret: MainTurret {
 				turretInfoType = "ACE_Mk6_RscWeaponRangeArtillery";
@@ -89,9 +93,10 @@ class CfgVehicles {
 				};
 				
 				class ACE_Load {
+					condition = "alive _target";
 					displayName = "Disassemble D-30";
 					distance = 5;
-					condition = "true";
+					exceptions[] = {"isNotInside"};
 					statement = "[_player,_target] spawn deadly_artilleryup_fnc_load";
 					showDisabled = 0;
 				};
@@ -164,7 +169,7 @@ class CfgVehicles {
 		displayname = "Disassembled D-30";
 		editorCategory = "EdCat_Supplies";
 		editorSubcategory = "EdSubcat_Storage";
-		armor = 500;
+		armor = 800;
 		faction = "BLU_F";
 		icon = "iconObject_1x3";
 		scope = 2;
@@ -178,7 +183,7 @@ class CfgVehicles {
 		ace_cargo_size = -1;
 		ace_dragging_canDrag = 1;
 		ace_dragging_DragDirection = 90;
-		ace_dragging_DragPosition[] = {0,2.5,0};
+		ace_dragging_DragPosition[] = {0,2.4,0.1};
 		ace_dragging_canCarry = 0;
 		
 		class EventHandlers: EventHandlers {
@@ -187,15 +192,15 @@ class CfgVehicles {
 		
         class ACE_Actions {
             class ACE_MainActions {
-				condition = "true";
+				condition = "alive _target";
 				displayName = "Interactions";
-				distance = 8;
+				distance = 6;
 				selection = "";
 				
 				class ACE_Unload {
-					displayName = "Assemble D-30";
-					distance = 8;
 					condition = "true";
+					displayName = "Assemble D-30";
+					distance = 6;
 					statement = "[_player,_target] spawn deadly_artilleryup_fnc_unload";
 					showDisabled = 0;
 				};
