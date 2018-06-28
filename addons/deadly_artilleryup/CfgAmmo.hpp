@@ -73,8 +73,8 @@ class CfgAmmo {
 		ace_rearm_caliber = 122;
 		ace_rearm_dummy = "dummy_artillery_shell";
 		EffectFly = "ArtilleryTrails";
-		hit = 235;
-		indirectHit = 165;
+		hit = 215;
+		indirectHit = 145;
 		indirectHitRange = 45;
 	};
 	
