@@ -1,0 +1,1 @@
+orbis_boxloader_fnc_palletLoop = compile preprocessFileLineNumbers 'orbis_boxloader_config\scripts\fnc_palletLoop.sqf';
